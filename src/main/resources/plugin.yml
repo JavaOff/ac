@@ -1,0 +1,23 @@
+name: ZorinAC
+version: '1.0'
+main: dev.javaoff.zorinAC.ZorinAC
+api-version: '1.21'
+depend: [packetevents]
+
+commands:
+  zorin:
+    description: Command for zorin anticheat
+    usage: /<command> <help>
+    aliases: [zorin]
+    permission: zorin.admin
+    permission-message: '§x§4§7§3§D§6§8You§x§4§D§4§2§6§E do§x§5§2§4§8§7§5nt §x§5§8§4§D§7§Bhav§x§5§D§5§2§8§1e p§x§6§3§5§7§8§7erm§x§6§8§5§D§8§Eiss§x§6§E§6§2§9§4ion§x§7§3§6§7§9§A to§x§7§9§6§D§A§1 us§x§7§E§7§2§A§7e t§x§8§4§7§7§A§Dhis§x§8§9§7§C§B§3 co§x§8§F§8§2§B§Amma§x§8§F§8§2§B§And'
+
+  antivpn:
+    description: AntiVPN whitelist management
+    usage: /antivpn whitelist <add|remove|list> <hráč/ip>
+    permission: antivpn.manage
+
+  permissions:
+    antivpn.manage:
+      description: Umožňuje správu whitelistu v AntiVPN
+      default: op

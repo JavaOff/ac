@@ -1,0 +1,155 @@
+# ZorinAC Configuration File
+# Configure Discord integration, messages, antibot settings, and individual checks.
+
+# Discord Webhook Settings
+discord:
+  flag-webhook-url: '' # URL for sending flag notifications
+  kick-webhook-url: '' # URL for sending kick notifications
+  discord-webhook-antibot-url: '' # URL for sending antibot notifications and
+
+
+
+webhook-url: "https://discord.com/api/webhooks/xxx/yyy" # URL for sending antivpn notifications
+
+vpnapi-key: "9bb87b6ee87a492d8ebf942e5e4f481c" # dont change api key its premium
+
+asn-whitelist:
+  - "T-Mobile Czech Republic"
+  - "O2 Czech Republic"
+  - "Orange Slovensko"
+  - "Slovak Telekom"
+
+# General Plugin Settings
+general:
+  log-to-console: true # Whether to log flag and kick events to the server console
+  notify-ops-only: true # If true, flag messages are only sent to operators; if false, sent to all players with zorin.notify permission
+  teleport-on-flag: true # Whether to teleport the player back on flag detection
+  teleport-count: 4 # Number of times to teleport the player back when flagged
+  teleport-delay-ticks: 2 # Delay between each teleport in ticks (1 tick = 1/20 second)
+
+# Messages
+messages:
+  kick-message: |
+    §x§4§7§3§D§6§8§lZ§x§5§5§4§A§7§8§lo§x§6§3§5§7§8§7§lr§x§7§1§6§5§9§7§li§x§7§E§7§2§A§7§ln§x§8§C§7§F§B§6§lA§x§9§A§8§C§C§6§lC
+    §8§m---------------------------------------
+    §f
+    You have been §x§4§7§3§D§6§8k§x§4§7§3§D§6§8i§x§4§7§3§D§6§8c§x§4§7§3§D§6§8k§x§4§7§3§D§6§8e§x§4§7§3§D§6§8d§f for cheating
+    please §x§4§7§3§D§6§8remove§f any modified client you have
+    §f
+    Detection: §x§9§A§8§C§C§6%d
+    §f
+    §8§m---------------------------------------
+    §7Time: §x§F§F§F§F§F§F%s
+  flag-message: §x§4§7§3§D§6§8§lZ§x§5§5§4§A§7§8§lo§x§6§3§5§7§8§7§lr§x§7§1§6§5§9§7§li§x§7§E§7§2§A§7§ln§x§8§C§7§F§B§6§lA§x§9§A§8§C§C§6§lC
+    §7» §x§4§7§3§D§6§8%playerName §fflagged by §x§9§A§8§C§C§6%checkName
+  no-permission: §x§4§7§3§D§6§8§lZ§x§5§5§4§A§7§8§lo§x§6§3§5§7§8§7§lr§x§7§1§6§5§9§7§li§x§7§E§7§2§A§7§ln§x§8§C§7§F§B§6§lA§x§9§A§8§C§C§6§lC
+    §7» You don't have permission to use this.
+  player-offline: §x§4§7§3§D§6§8§lZ§x§5§5§4§A§7§8§lo§x§6§3§5§7§8§7§lr§x§7§1§6§5§9§7§li§x§7§E§7§2§A§7§ln§x§8§C§7§F§B§6§lA§x§9§A§8§C§C§6§lC
+    §7» Player is offline or doesn't exist.
+  check-not-found: §x§4§7§3§D§6§8§lZ§x§5§5§4§A§7§8§lo§x§6§3§5§7§8§7§lr§x§7§1§6§5§9§7§li§x§7§E§7§2§A§7§ln§x§8§C§7§F§B§6§lA§x§9§A§8§C§C§6§lC
+    §7» Check '%s' doesn't exist.
+  reload-success: §x§4§7§3§D§6§8§lZ§x§5§5§4§A§7§8§lo§x§6§3§5§7§8§7§lr§x§7§1§6§5§9§7§li§x§7§E§7§2§A§7§ln§x§8§C§7§F§B§6§lA§x§9§A§8§C§C§6§lC
+    §7» Configuration reloaded.
+  antibot-title: §cSolve the CAPTCHA!
+  antibot-subtitle: '§eEnter: %s'
+  antibot-instruction: §eType the CAPTCHA code in chat to verify.
+  antibot-wrong-captcha: §cWrong CAPTCHA! Try again.
+  antibot-timeout: §cCAPTCHA timeout! You have been kicked.
+  antibot-success-title: §aSuccess!
+  antibot-success-subtitle: §aYou have been verified.
+  antibot-success: §aCAPTCHA verified successfully!
+
+
+
+  changed-ip-kick: |
+    §x§F§D§0§E§0§E§lA§x§F§D§0§E§0§E§lN§x§F§D§0§E§0§E§lT§x§F§D§0§E§0§E§lI§x§F§D§0§E§0§E§lV§x§F§D§0§E§0§E§lP§x§F§D§0§E§0§E§lN
+      §8§m-----------------------------
+    §8§m
+      §x§F§D§0§E§0§ET§x§F§D§0§E§0§Eu§x§F§D§0§E§0§Er§x§F§D§0§E§0§En §x§F§D§0§E§0§Eo§x§F§D§0§E§0§Ef§x§F§D§0§E§0§Ef §x§F§D§0§E§0§EV§x§F§D§0§E§0§EP§x§F§D§0§E§0§EN §x§F§D§0§E§0§Eo§x§F§D§0§E§0§Er §x§F§D§0§E§0§Ec§x§F§D§0§E§0§Eo§x§F§D§0§E§0§En§x§F§D§0§E§0§Et§x§F§D§0§E§0§Ea§x§F§D§0§E§0§Ec§x§F§D§0§E§0§Et §x§F§D§0§E§0§EA§x§F§D§0§E§0§Ed§x§F§D§0§E§0§Em§x§F§D§0§E§0§Ei§x§F§D§0§E§0§En
+      §8§m
+      §8§m-----------------------------
+
+  vpn-detected-kick: |
+    §x§F§D§0§E§0§E§lA§x§F§D§0§E§0§E§lN§x§F§D§0§E§0§E§lT§x§F§D§0§E§0§E§lI§x§F§D§0§E§0§E§lV§x§F§D§0§E§0§E§lP§x§F§D§0§E§0§E§lN
+     §8§m-----------------------------
+    §8§m
+      §x§F§D§0§E§0§ET§x§F§D§0§E§0§Eu§x§F§D§0§E§0§Er§x§F§D§0§E§0§En §x§F§D§0§E§0§Eo§x§F§D§0§E§0§Ef§x§F§D§0§E§0§Ef §x§F§D§0§E§0§EV§x§F§D§0§E§0§EP§x§F§D§0§E§0§EN §x§F§D§0§E§0§Eo§x§F§D§0§E§0§Er §x§F§D§0§E§0§Ec§x§F§D§0§E§0§Eo§x§F§D§0§E§0§En§x§F§D§0§E§0§Et§x§F§D§0§E§0§Ea§x§F§D§0§E§0§Ec§x§F§D§0§E§0§Et §x§F§D§0§E§0§EA§x§F§D§0§E§0§Ed§x§F§D§0§E§0§Em§x§F§D§0§E§0§Ei§x§F§D§0§E§0§En
+      §8§m
+     §8§m-----------------------------
+player-ips: {}
+
+# AntiBot Settings
+antibot:
+  enabled: true
+  captcha-timeout-seconds: 15 # Increased timeout for better user experience
+  captcha-length: 5 # Length of the captcha code
+  max-connections-per-ip: 3 # Max ip per connection
+  whitelist:
+    - AdminPlayer
+    - 127.0.0.0
+
+# Check Configurations
+checks:
+  AirJumpCount:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  AirJumpGlobal:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  SpeedGround:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  SpeedAir:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  SpeedGlobal:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  FlightGlobal:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  FlightPacket:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  FlightAir:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  NoFallAnimation:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  NoFallGlobal:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  NoFallGround:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  NoFallInvalid:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  NoFallMicro:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  NoFallRapid:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+  NoFallSpoof:
+    enabled: true
+    max-violations: 5
+    punish-commands: []
+
+whitelist: []
+
