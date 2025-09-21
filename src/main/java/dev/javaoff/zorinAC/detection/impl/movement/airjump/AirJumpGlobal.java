@@ -68,6 +68,7 @@ public class AirJumpGlobal implements Detection {
                 lastTimestamp.put(uuid, now);
             }
 
+
             private boolean shouldSkipCheck(Player player) {
                 return player.hasPotionEffect(PotionEffectType.LEVITATION) ||
                         player.getAllowFlight() ||

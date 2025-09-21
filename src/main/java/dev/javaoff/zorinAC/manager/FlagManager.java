@@ -82,6 +82,7 @@ public class FlagManager implements Listener {
                     .forEach(p -> p.sendMessage(message));
         }
 
+
         if (configManager.isLogToConsole()) {
             ZorinAC.logger().info(message);
         }
